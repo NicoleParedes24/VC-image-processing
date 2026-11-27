@@ -1,0 +1,11 @@
+# Dataset crudo de Kaggle (84 MB): se descarga aparte y se regenera la muestra con src/preparar_dataset.py
+data/raw/
+
+# Python y Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# Notas locales de trabajo
+CLAUDE.md
