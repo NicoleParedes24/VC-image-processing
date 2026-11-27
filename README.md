@@ -43,8 +43,23 @@ data/
   metadata.csv                         propiedades y tipo de exposición de cada imagen
   descartadas.csv                      imágenes descartadas y el motivo
   raw/                                 dataset original (no se sube; ver abajo)
+ejercicios/
+  __init__.py
+  ejercicio1.py
+  ejercicio2.py
+  ejercicio3.py
+  ejercicio4.py
+main.py
 src/
   preparar_dataset.py                  limpieza y muestreo reproducible
+```
+
+## Cómo ejecutar los ejercicios
+
+Desde la carpeta principal del proyecto, ejecuta:
+
+```powershell
+py main.py
 ```
 
 ## Cómo reproducir la muestra
