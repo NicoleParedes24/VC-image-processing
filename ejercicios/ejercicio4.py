@@ -41,21 +41,18 @@ def cargar_imagenes(carpeta_dataset):
 
 
 def binarizar_manual(imagen_gris):
-    """Umbral binario simple con el valor fijado en UMBRAL_MANUAL."""
-    _, binaria = cv2.threshold(imagen_gris, UMBRAL_MANUAL, 255, cv2.THRESH_BINARY)
+    "Umbral binario simple con el valor fijado en UMBRAL_MANUAL."
+    binaria = cv2.threshold(imagen_gris, UMBRAL_MANUAL, 255, cv2.THRESH_BINARY)
     return binaria
 
 
 def binarizar_otsu(imagen_gris):
-    """Umbral de Otsu: OpenCV calcula el valor óptimo automáticamente."""
-    umbral, binaria = cv2.threshold(
-        imagen_gris, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU
-    )
+    "Umbral de Otsu: OpenCV calcula el valor óptimo automáticamente."
+    umbral, binaria = cv2.threshold(imagen_gris, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     return int(umbral), binaria
 
 
 def mostrar_comparacion(ejemplos):
-    """Muestra por clase: original | histograma | binaria manual | binaria Otsu."""
     plt.figure(figsize=(14, 4 * len(ejemplos)))
     posicion = 1
 
@@ -100,7 +97,6 @@ def mostrar_comparacion(ejemplos):
         posicion += 4
 
     plt.suptitle(
-        "Challenge 4 — Binarización: umbral manual vs. Otsu",
         fontsize=13,
         fontweight="bold",
     )
